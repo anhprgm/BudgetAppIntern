@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.UserActivity">
+    <ImageView
+        android:id="@+id/returnKey"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_return"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/user_icon"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/nameUser"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        />
+    <TableLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:id="@+id/changeNameDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+
+            <ImageView
+                android:padding="7dp"
+                android:background="@drawable/background_circle_user_modify"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:src="@drawable/edit_rename_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Đổi Tên Riêng"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:id="@+id/resetEmailButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+
+            <ImageView
+                android:background="@drawable/background_circle_user_modify"
+                android:padding="7dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="start|center"
+                android:src="@drawable/email_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Đổi Địa Chỉ Email"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:id="@+id/resetPassWordButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_weight="1">
+            <ImageView
+                android:background="@drawable/background_circle_user_modify"
+                android:padding="7dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/password_reset_ic"
+                android:layout_gravity="start|center"
+                android:contentDescription="@string/app_name" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:text="Đổi Mật Khẩu"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:padding="5dp"
+            android:id="@+id/deleteAccButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1">
+            <ImageView
+                android:padding="7dp"
+                android:background="@drawable/background_circle_user_modify"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/user_delete_icon"
+                android:layout_gravity="start|center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:text="Xóa Tài Khoản"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/needAHelp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="7dp"
+                android:id="@+id/ic_help"
+                android:background="@drawable/background_circle_user_modify"
+                android:layout_gravity="start|center"
+                android:src="@drawable/help_ic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Liên hệ Trợ Giúp"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/SignOut"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:gravity="center">
+            <ImageView
+                android:background="@drawable/background_circle_user_modify"
+                android:padding="7dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/logout_icon"
+                android:layout_gravity="start|center" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginStart="20dp"
+                android:layout_gravity="center"
+                android:text="Đăng xuất"/>
+
+        </LinearLayout>
+    </TableLayout>
+</LinearLayout>

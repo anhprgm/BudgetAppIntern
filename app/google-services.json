@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "414387630824",
+    "firebase_url": "https://budget-app-fc6dd-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    "project_id": "budget-app-fc6dd",
+    "storage_bucket": "budget-app-fc6dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414387630824:android:6d67f07e778e2d5083cf5d",
+        "android_client_info": {
+          "package_name": "com.vvtvofficial.quanlychitieu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414387630824-7b729m0qm2dm66s1k95182kmi3n93ias.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPc9EXNlBF0dTf5gVvUJNQyopdxhqyTGE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414387630824-7b729m0qm2dm66s1k95182kmi3n93ias.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

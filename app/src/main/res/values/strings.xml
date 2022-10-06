@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Quan Ly Chi Tieu</string>
+    <string name="QuanLyChiTieu">Quản Lý Chi Tiêu</string>
+    <string name="PassWord">Mật Khẩu</string>
+    <string name="emailLogin">Tên Đăng Nhập</string>
+    <string name="Login">Đăng Nhập</string>
+    <string name="SignUp">Đăng Ký</string>
+    <string name="AuthIsU">Chứng Minh Đó Là Bạn</string>
+    <string-array name="item">
+        <item>Select</item>
+        <item>Di Chuyển</item>
+        <item>Ăn Uống</item>
+        <item>Nhà Cửa</item>
+        <item>Giải trí</item>
+        <item>Học Tập</item>
+        <item>Từ Thiện</item>
+        <item>Sức Khỏe</item>
+        <item>Cá Nhân</item>
+        <item>Thu Nhập</item>
+        <item>Khác</item>
+    </string-array>
+    <string name="your_text_reference"><u>Không Phải Tôi</u></string>
+</resources>
