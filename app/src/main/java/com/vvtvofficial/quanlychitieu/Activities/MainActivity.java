@@ -43,7 +43,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth auth = FirebaseAuth.getInstance();
     private FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    private CardView budgetCardView;
+    private CardView budgetCardView, todayCardView;
     private ImageView user_setting, fab;
     private SwitchMaterial expandMenu;
     private DatabaseReference incomeRef, budgetRef;
@@ -102,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 String sTotal =  dotMoney(totalAmount - totalBudget) + " VNĐ";
                 moneyBalance.setText(sTotal);
-                budgetTv.setText(String.valueOf(totalBudget / 1000) + "K");
-                weekTv.setText(String.valueOf(totalWeekAmount / 1000) + "K");
-                monthTV.setText(String.valueOf(totalMonthAmount / 1000) + "K");
-                todayTv.setText(String.valueOf(todayAmount / 1000) + "K");
+                budgetTv.setText((totalBudget / 1000) + "K");
+                weekTv.setText((totalWeekAmount / 1000) + "K");
+                monthTV.setText((totalMonthAmount / 1000) + "K");
+                todayTv.setText((todayAmount / 1000) + "K");
             }
 
             @Override
@@ -116,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         fab.setOnClickListener(v -> addItem());
+        todayCardView.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TodayActivity.class);
+            startActivity(intent);
+        });
     }
     private void binding() {
         budgetCardView = findViewById(R.id.budgetCardView);
@@ -131,6 +135,8 @@ public class MainActivity extends AppCompatActivity {
         todayTv = findViewById(R.id.todayTv);
         weekTv = findViewById(R.id.weekTv);
         savingTV = findViewById(R.id.savingsTv);
+
+        todayCardView = findViewById(R.id.todayCardView);
     }
 
     private void addItem() {

@@ -183,7 +183,6 @@ public class BudgetActivity extends AppCompatActivity {
                     holder.setNotes("Note: " + model.getNotes());
                 }
 
-
                 switch (model.getItem()) {
                     case "Di Chuyển":
                         holder.imageView.setImageResource(R.drawable.ic_transport);

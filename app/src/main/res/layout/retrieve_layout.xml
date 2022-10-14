@@ -4,9 +4,11 @@
     android:layout_height="wrap_content"
     android:background="@color/teal_700"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:visibility="visible"
     android:orientation="vertical"
     android:elevation="10dp"
     app:cardElevation="10dp"
+    android:id="@+id/retrieve"
     android:layout_marginTop="10dp">
 
 
@@ -16,55 +18,55 @@
         android:background="@color/gold">
 
         <LinearLayout
+            android:id="@+id/linerLayout"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/linerLayout">
+            android:orientation="vertical">
 
             <TextView
+                android:id="@+id/amount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="0đ"
-                android:textStyle="bold"
                 android:textColor="#FF0000"
                 android:textSize="18sp"
-                android:id="@+id/amount"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Item"
-                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="18sp"
-                android:id="@+id/item"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/note"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Note"
-                android:textStyle="bold"
                 android:textColor="@color/teal_700"
                 android:textSize="12sp"
-                android:id="@+id/note"/>
+                android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date"
-                android:textStyle="normal"
                 android:textColor="@color/black"
                 android:textSize="10sp"
-                android:id="@+id/date"/>
+                android:textStyle="normal" />
         </LinearLayout>
 
         <ImageView
+            android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_house"
             android:layout_margin="10dp"
-            android:id="@+id/imageView"
-            android:layout_toEndOf="@+id/linerLayout"/>
-            />
+            android:layout_toEndOf="@+id/linerLayout"
+            android:src="@drawable/ic_house" />
+        />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

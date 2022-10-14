@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    android:orientation="vertical"
+    tools:context=".Activities.TodayActivity">
+    <TextView
+        android:id="@+id/totalBudgetAmountTextView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:text="Tổng Lượng Tài Chính: 0đ"
+        android:background="@drawable/background_button"
+        android:layout_marginTop="5dp"/>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewToday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:stackFromEnd="false" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            app:fabSize="normal"
+            android:id="@+id/fab"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_margin="15dp"
+            android:contentDescription="@string/app_name" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

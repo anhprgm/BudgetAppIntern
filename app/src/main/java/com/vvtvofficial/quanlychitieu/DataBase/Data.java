@@ -72,4 +72,5 @@ public class Data {
     public void setWeek(int week) {
         this.week = week;
     }
+
 }

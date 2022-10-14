@@ -1,28 +1,37 @@
 package com.vvtvofficial.quanlychitieu.DataBase;
 
-import org.joda.time.Months;
-
 public class DataIncome {
-    String notes, id, date;
-    int income;
-    int month;
-    public DataIncome(){
+    String item, data, id, notes;
+    int amount, month, week;
+
+    public DataIncome() {
 
     }
-    public DataIncome(String notes, String id, String date, int income, int month) {
-        this.notes = notes;
+
+    public DataIncome(String item, String data, String id, String notes, int amount, int month, int week) {
+        this.item = item;
+        this.data = data;
         this.id = id;
-        this.date = date;
-        this.income = income;
-        this.month = month;
-    }
-
-    public String getNotes() {
-        return notes;
-    }
-
-    public void setNotes(String notes) {
         this.notes = notes;
+        this.amount = amount;
+        this.month = month;
+        this.week = week;
+    }
+
+    public String getItem() {
+        return item;
+    }
+
+    public void setItem(String item) {
+        this.item = item;
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
     }
 
     public String getId() {
@@ -33,20 +42,20 @@ public class DataIncome {
         this.id = id;
     }
 
-    public String getDate() {
-        return date;
+    public String getNotes() {
+        return notes;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setNotes(String notes) {
+        this.notes = notes;
     }
 
-    public int getIncome() {
-        return income;
+    public int getAmount() {
+        return amount;
     }
 
-    public void setIncome(int income) {
-        this.income = income;
+    public void setAmount(int amount) {
+        this.amount = amount;
     }
 
     public int getMonth() {
@@ -55,5 +64,13 @@ public class DataIncome {
 
     public void setMonth(int month) {
         this.month = month;
+    }
+
+    public int getWeek() {
+        return week;
+    }
+
+    public void setWeek(int week) {
+        this.week = week;
     }
 }
