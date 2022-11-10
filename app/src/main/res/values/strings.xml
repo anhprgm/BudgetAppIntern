@@ -20,4 +20,5 @@
         <item>Khác</item>
     </string-array>
     <string name="your_text_reference"><u>Không Phải Tôi</u></string>
+    <string name="service_name">noti</string>
 </resources>

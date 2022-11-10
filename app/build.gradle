@@ -32,10 +32,10 @@ android {
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.android.material:material:1.7.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.firebase:firebase-bom:31.0.0'
+    implementation 'com.google.firebase:firebase-bom:31.0.1'
     implementation 'com.firebaseui:firebase-ui-database:8.0.1'
     implementation 'com.google.firebase:firebase-auth:21.1.0'
     implementation 'com.google.firebase:firebase-analytics:21.2.0'
@@ -45,7 +45,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation "androidx.recyclerview:recyclerview:1.2.1"
-
+    implementation "androidx.core:core:1.9.0"
     // finger print
     implementation "androidx.biometric:biometric:1.1.0"
     //basic notify

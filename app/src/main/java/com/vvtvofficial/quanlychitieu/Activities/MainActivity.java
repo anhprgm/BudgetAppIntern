@@ -51,10 +51,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView budgetTv, todayTv, weekTv, monthTV, savingTV;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         binding();
-
+//        Intent intentx =new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS");
+//        startActivity(intentx);
         expandMenu.setVisibility(View.VISIBLE);
         budgetRef = FirebaseDatabase.getInstance().getReference().child("budget").child(Objects.requireNonNull(auth.getCurrentUser()).getUid());
         incomeRef = FirebaseDatabase.getInstance().getReference().child("incomeMoney").child(Objects.requireNonNull(auth.getCurrentUser()).getUid());
@@ -113,7 +115,11 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
         });
-
+        savingTV = findViewById(R.id.savingsTv);
+        savingTV.setOnClickListener(v -> {
+            Intent intent = new Intent(this, TestActivity.class);
+            startActivity(intent);
+        });
 
         fab.setOnClickListener(v -> addItem());
         todayCardView.setOnClickListener(v -> {

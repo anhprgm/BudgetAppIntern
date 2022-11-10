@@ -18,15 +18,18 @@ import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.vvtvofficial.quanlychitieu.R;
 
+import java.util.Objects;
 import java.util.concurrent.Executor;
 
 public class LoginActivity extends AppCompatActivity {
     private static final int REQUEST_CODE = 0;
-    private EditText email, password;
+    private EditText email;
+    private TextInputEditText password;
     private TextView loginButton, forgotPassword, dontMe, helloUser;
     private ImageView fingerButton;
     private LinearLayout SignUpButton;
@@ -49,13 +52,12 @@ public class LoginActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-
+//        showPass.setOnClickListener(v -> {
+////            password.setTransformationMethod();
+//        });
 
         progressDialog = new ProgressDialog(this);
         if (currentUser != null) {
-//            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-//            startActivity(intent);
-//            finish();
             helloUser.setText("XIN CHÀO " + currentUser.getDisplayName());
             fingerButton.setVisibility(View.VISIBLE);
             check = true;
@@ -78,9 +80,10 @@ public class LoginActivity extends AppCompatActivity {
                 emailString = email.getText().toString().trim();
             }
             else {
+                assert currentUser != null;
                 emailString = currentUser.getEmail();
             }
-            String passwordString = password.getText().toString().trim();
+            String passwordString = Objects.requireNonNull(password.getText()).toString().trim();
             assert emailString != null;
             if (emailString.isEmpty()) {
                 email.setError("Chưa Nhập Email");

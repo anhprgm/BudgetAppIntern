@@ -38,6 +38,7 @@ import org.joda.time.Weeks;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 import java.util.Objects;
 
 public class BudgetActivity extends AppCompatActivity {
@@ -45,7 +46,6 @@ public class BudgetActivity extends AppCompatActivity {
     private TextView totalBudgetAmountTextView;
     private RecyclerView recyclerView;
     private DatabaseReference budgetRef;
-    private FirebaseAuth mAuth;
     private ProgressDialog loader;
 
 
@@ -56,7 +56,7 @@ public class BudgetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budget);
-        mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         budgetRef = FirebaseDatabase.getInstance().getReference().child("budget").child(Objects.requireNonNull(mAuth.getCurrentUser()).getUid());
         loader = new ProgressDialog(this);
 
@@ -90,7 +90,6 @@ public class BudgetActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         recyclerView = findViewById(R.id.recyclerViewBudget);
         totalBudgetAmountTextView = findViewById(R.id.totalBudgetAmountTextView);
-
 
     }
 
@@ -128,7 +127,7 @@ public class BudgetActivity extends AppCompatActivity {
                 loader.show();
 
                 String id = budgetRef.push().getKey();
-                DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
                 Calendar cal = Calendar.getInstance();
                 String date = dateFormat.format(cal.getTime());
 
@@ -151,8 +150,6 @@ public class BudgetActivity extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
-
-
         cancel.setOnClickListener(v -> dialog.dismiss());
         dialog.show();
 
